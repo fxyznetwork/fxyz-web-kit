@@ -1,5 +1,7 @@
 # fxyz-web-kit
 
+[![CI](https://github.com/fxyznetwork/fxyz-web-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/fxyznetwork/fxyz-web-kit/actions/workflows/ci.yml)
+
 A small kit of standalone Next.js utilities: structured logging,
 telemetry with built-in PII guardrails, locale-routing middleware, and
 SEO metadata helpers.
