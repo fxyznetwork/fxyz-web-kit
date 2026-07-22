@@ -1,0 +1,12 @@
+{
+	"projectId": "your-languine-project-id",
+	"locale": {
+		"source": "en",
+		"targets": ["es"]
+	},
+	"files": {
+		"json": {
+			"include": ["dictionaries/[locale].json"]
+		}
+	}
+}

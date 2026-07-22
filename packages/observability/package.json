@@ -1,0 +1,38 @@
+{
+	"name": "@fxyz/observability",
+	"version": "0.1.0",
+	"description": "PII-scrubbing, NOOP-safe error/event capture for Next.js, wrapping @logtail/next.",
+	"license": "Apache-2.0",
+	"type": "module",
+	"exports": {
+		".": "./src/index.ts",
+		"./client": "./src/client.ts",
+		"./keys": "./src/keys.ts",
+		"./instrumentation": "./src/instrumentation.ts",
+		"./next-config": "./src/next-config.ts"
+	},
+	"files": [
+		"src"
+	],
+	"scripts": {
+		"clean": "git clean -xdf .cache .turbo dist node_modules",
+		"test": "NODE_ENV=test jest --passWithNoTests",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@logtail/next": "^0.3.1",
+		"@t3-oss/env-nextjs": "^0.13.11",
+		"zod": "^4.4.3"
+	},
+	"devDependencies": {
+		"@jest/globals": "^30.4.1",
+		"@types/jest": "^30.0.0",
+		"@types/node": "^22",
+		"jest": "^30.4.2",
+		"next": "16.2.7",
+		"typescript": "^6.0.3"
+	},
+	"peerDependencies": {
+		"next": "^16.0.0"
+	}
+}

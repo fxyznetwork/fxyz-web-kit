@@ -1,0 +1,33 @@
+{
+	"name": "@fxyz/seo",
+	"version": "0.1.0",
+	"description": "SEO metadata helpers + JSON-LD generators for the Next.js Metadata API.",
+	"license": "Apache-2.0",
+	"exports": {
+		".": "./metadata.ts",
+		"./json-ld": "./json-ld.tsx"
+	},
+	"files": [
+		"metadata.ts",
+		"json-ld.tsx"
+	],
+	"scripts": {
+		"clean": "git clean -xdf .cache .turbo dist node_modules",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"lodash.merge": "^4.6.2",
+		"schema-dts": "^2.0.0"
+	},
+	"devDependencies": {
+		"@types/lodash.merge": "^4.6.9",
+		"@types/node": "^22",
+		"@types/react": "^19.2.15",
+		"@types/react-dom": "^19.2.3",
+		"next": "16.2.7"
+	},
+	"peerDependencies": {
+		"react": "^19.2.6",
+		"react-dom": "^19.2.6"
+	}
+}

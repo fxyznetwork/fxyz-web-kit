@@ -1,0 +1,38 @@
+{
+	"name": "@fxyz/i18n",
+	"version": "0.1.0",
+	"description": "Next.js locale middleware plus JSON-dictionary sync/validate/coverage tooling.",
+	"license": "Apache-2.0",
+	"exports": {
+		".": "./index.ts",
+		"./locales": "./locales.ts",
+		"./middleware": "./middleware.ts"
+	},
+	"files": [
+		"index.ts",
+		"locales.ts",
+		"middleware.ts",
+		"languine.json",
+		"dictionaries",
+		"scripts"
+	],
+	"scripts": {
+		"clean": "git clean -xdf .cache .turbo dist node_modules",
+		"typecheck": "tsc --noEmit",
+		"sync": "node scripts/sync-dictionaries.mjs",
+		"validate": "node scripts/validate-dictionaries.mjs",
+		"validate:coverage": "node scripts/validate-coverage.mjs"
+	},
+	"dependencies": {
+		"@formatjs/intl-localematcher": "^0.8.9",
+		"negotiator": "^1.0.0",
+		"next-international": "^1.3.1",
+		"server-only": "^0.0.1"
+	},
+	"devDependencies": {
+		"@types/negotiator": "^0.6.4",
+		"@types/node": "^22",
+		"next": "16.2.7",
+		"typescript": "^6.0.3"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"name": "fxyz-web-kit",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Reusable Next.js web infrastructure packages: structured logging, PII-safe telemetry, locale middleware, SEO metadata helpers.",
+	"license": "Apache-2.0",
+	"packageManager": "pnpm@9.15.0",
+	"scripts": {
+		"typecheck": "pnpm -r exec tsc --noEmit",
+		"test": "pnpm -r test",
+		"validate:i18n": "pnpm --filter @fxyz/i18n validate",
+		"validate:i18n:coverage": "pnpm --filter @fxyz/i18n validate:coverage"
+	}
+}
