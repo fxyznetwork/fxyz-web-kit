@@ -3,6 +3,19 @@
 	"version": "0.1.0",
 	"description": "PII-scrubbing, NOOP-safe error/event capture for Next.js, wrapping @logtail/next.",
 	"license": "Apache-2.0",
+	"author": "fxyz network",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fxyznetwork/fxyz-web-kit.git",
+		"directory": "packages/observability"
+	},
+	"homepage": "https://github.com/fxyznetwork/fxyz-web-kit/tree/main/packages/observability#readme",
+	"bugs": {
+		"url": "https://github.com/fxyznetwork/fxyz-web-kit/issues"
+	},
+	"engines": {
+		"node": ">=22"
+	},
 	"type": "module",
 	"exports": {
 		".": "./src/index.ts",
@@ -26,6 +39,8 @@
 	},
 	"devDependencies": {
 		"@jest/globals": "^30.4.1",
+		"@swc/core": "^1.15.46",
+		"@swc/jest": "^0.2.39",
 		"@types/jest": "^30.0.0",
 		"@types/node": "^22",
 		"jest": "^30.4.2",

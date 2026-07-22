@@ -3,6 +3,19 @@
 	"version": "0.1.0",
 	"description": "Structured logging for Node.js and the browser, built on Pino.",
 	"license": "Apache-2.0",
+	"author": "fxyz network",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fxyznetwork/fxyz-web-kit.git",
+		"directory": "packages/logger"
+	},
+	"homepage": "https://github.com/fxyznetwork/fxyz-web-kit/tree/main/packages/logger#readme",
+	"bugs": {
+		"url": "https://github.com/fxyznetwork/fxyz-web-kit/issues"
+	},
+	"engines": {
+		"node": ">=22"
+	},
 	"type": "module",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.js",
@@ -25,6 +38,7 @@
 	"scripts": {
 		"build": "tsup src/index.ts src/browser.ts --format esm,cjs --dts",
 		"clean": "rm -rf .turbo node_modules dist",
+		"test": "NODE_ENV=test jest --passWithNoTests",
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
@@ -32,7 +46,12 @@
 		"pino-pretty": "^13.1.3"
 	},
 	"devDependencies": {
+		"@jest/globals": "^30.4.1",
+		"@swc/core": "^1.15.46",
+		"@swc/jest": "^0.2.39",
+		"@types/jest": "^30.0.0",
 		"@types/node": "^22",
+		"jest": "^30.4.2",
 		"tsup": "^8.5.1",
 		"typescript": "^6.0.3"
 	}

@@ -3,6 +3,19 @@
 	"version": "0.1.0",
 	"description": "SEO metadata helpers + JSON-LD generators for the Next.js Metadata API.",
 	"license": "Apache-2.0",
+	"author": "fxyz network",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fxyznetwork/fxyz-web-kit.git",
+		"directory": "packages/seo"
+	},
+	"homepage": "https://github.com/fxyznetwork/fxyz-web-kit/tree/main/packages/seo#readme",
+	"bugs": {
+		"url": "https://github.com/fxyznetwork/fxyz-web-kit/issues"
+	},
+	"engines": {
+		"node": ">=22"
+	},
 	"exports": {
 		".": "./metadata.ts",
 		"./json-ld": "./json-ld.tsx"
@@ -13,6 +26,7 @@
 	],
 	"scripts": {
 		"clean": "git clean -xdf .cache .turbo dist node_modules",
+		"test": "NODE_ENV=test jest --passWithNoTests",
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
@@ -20,10 +34,15 @@
 		"schema-dts": "^2.0.0"
 	},
 	"devDependencies": {
+		"@jest/globals": "^30.4.1",
+		"@swc/core": "^1.15.46",
+		"@swc/jest": "^0.2.39",
+		"@types/jest": "^30.0.0",
 		"@types/lodash.merge": "^4.6.9",
 		"@types/node": "^22",
 		"@types/react": "^19.2.15",
 		"@types/react-dom": "^19.2.3",
+		"jest": "^30.4.2",
 		"next": "16.2.7",
 		"typescript": "^6.0.3"
 	},

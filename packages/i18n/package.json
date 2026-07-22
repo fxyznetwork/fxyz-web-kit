@@ -3,6 +3,19 @@
 	"version": "0.1.0",
 	"description": "Next.js locale middleware plus JSON-dictionary sync/validate/coverage tooling.",
 	"license": "Apache-2.0",
+	"author": "fxyz network",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fxyznetwork/fxyz-web-kit.git",
+		"directory": "packages/i18n"
+	},
+	"homepage": "https://github.com/fxyznetwork/fxyz-web-kit/tree/main/packages/i18n#readme",
+	"bugs": {
+		"url": "https://github.com/fxyznetwork/fxyz-web-kit/issues"
+	},
+	"engines": {
+		"node": ">=22"
+	},
 	"exports": {
 		".": "./index.ts",
 		"./locales": "./locales.ts",
@@ -18,6 +31,7 @@
 	],
 	"scripts": {
 		"clean": "git clean -xdf .cache .turbo dist node_modules",
+		"test": "NODE_ENV=test jest --passWithNoTests",
 		"typecheck": "tsc --noEmit",
 		"sync": "node scripts/sync-dictionaries.mjs",
 		"validate": "node scripts/validate-dictionaries.mjs",
@@ -30,8 +44,13 @@
 		"server-only": "^0.0.1"
 	},
 	"devDependencies": {
+		"@jest/globals": "^30.4.1",
+		"@swc/core": "^1.15.46",
+		"@swc/jest": "^0.2.39",
+		"@types/jest": "^30.0.0",
 		"@types/negotiator": "^0.6.4",
 		"@types/node": "^22",
+		"jest": "^30.4.2",
 		"next": "16.2.7",
 		"typescript": "^6.0.3"
 	}
