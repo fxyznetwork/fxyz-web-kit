@@ -51,7 +51,7 @@
 		"@types/negotiator": "^0.6.4",
 		"@types/node": "^22",
 		"jest": "^30.4.2",
-		"next": "16.2.7",
+		"next": "16.2.12",
 		"typescript": "^6.0.3"
 	}
 }
